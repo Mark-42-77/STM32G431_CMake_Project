@@ -1,0 +1,84 @@
+# ========================================
+# STM32 CMake 项目 Git 忽略文件
+# ========================================
+
+# ==================== 编译输出 ====================
+# 整个 build 目录（最重要！占用空间最大）
+build/
+
+# 编译产物（备用，以防 build 目录外有残留）
+*.elf
+*.bin
+*.hex
+*.map
+*.o
+*.obj
+*.a
+*.lib
+*.d
+
+# ==================== IDE 和编辑器 ====================
+# VSCode 工作区文件（可选保留 launch.json 和 c_cpp_properties.json）
+.vscode/*
+# 但保留调试配置（取消下面两行的注释如果想保留）
+!.vscode/launch.json
+!.vscode/c_cpp_properties.json
+!.vscode/settings.json
+
+# JetBrains IDE（CLion 等）
+.idea/
+
+# Eclipse
+.project
+.cproject
+.settings/
+
+# ==================== 代码分析工具 ====================
+# clangd 缓存（很大，必须忽略）
+.cache/
+compile_commands.json
+
+# ==================== STM32CubeMX ====================
+# CubeMX 备份文件
+*.ioc.bak
+*_Backup*/
+
+# ==================== 系统文件 ====================
+# Windows
+Thumbs.db
+Desktop.ini
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.fuse_hidden*
+.nfs*
+
+# ==================== 日志和临时文件 ====================
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# ==================== 调试相关 ====================
+# OpenOCD 相关
+openocd.log
+
+# ==================== 其他 ====================
+# 压缩包
+*.zip
+*.rar
+*.7z
+*.tar.gz
+
+# 备份文件
+*.bak
+*.backup
+*.orig
